@@ -1,0 +1,10 @@
+.div-box {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.image {
+  width: 100%;
+  max-height: 270px;
+  flex-wrap: wrap;
+}
