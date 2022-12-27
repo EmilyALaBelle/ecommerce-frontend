@@ -1,12 +1,12 @@
 import { useEffect } from "react"
-import ProductCard from "./ProductCard"
+import DiscountedProductCard from "./DiscountedProductCard"
 import { useState } from "react"
 import "../assets/ProductCard.css"
 
 export default function ProductList() {
   const [products, setProducts] = useState([])
   useEffect(() => {
-    fetch('http://127.0.0.1:5002/products')
+    fetch('http://127.0.0.1:5002/discountedProducts')
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => console.error(err))
@@ -18,7 +18,7 @@ export default function ProductList() {
       {!products
         ? <p>Loading...</p>
         : products.map(products => (
-          <ProductCard setProducts={setProducts} products={products} key={products._id}></ProductCard>
+          <DiscountedProductCard setProducts={setProducts} products={products} key={products._id}></DiscountedProductCard>
         ))}
     </section>
   )

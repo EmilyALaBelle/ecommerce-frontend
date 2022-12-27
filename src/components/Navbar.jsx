@@ -19,7 +19,7 @@ import { useNavigate } from 'react-router-dom';
 
 const drawerWidth = 240;
 
-export default function DrawerAppBar(props: Props) {
+export default function DrawerAppBar(props) {
   const navigate = useNavigate();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -29,6 +29,10 @@ export default function DrawerAppBar(props: Props) {
   }
   const navigateItems = () => {
     navigate('/items')
+  }
+
+  const navigateDiscounted = () => {
+    navigate('/discountedItems')
   }
 
   const handleDrawerToggle = () => {
@@ -42,21 +46,21 @@ export default function DrawerAppBar(props: Props) {
       </Typography>
       <Divider />
       <List>
-          <ListItem disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary="Home" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary="Deals" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem  disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary="Items" />
-            </ListItemButton>
-          </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemText primary="Home" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemText primary="Deals" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemText primary="Items" />
+          </ListItemButton>
+        </ListItem>
       </List>
     </Box>
   );
@@ -85,15 +89,15 @@ export default function DrawerAppBar(props: Props) {
             MUI
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-              <Button  sx={{ color: '#fff' }} onClick={navigateHome}>
-                Home
-              </Button>
-              <Button  sx={{ color: '#fff' }} >
-                Deals
-              </Button>
-              <Button  sx={{ color: '#fff' }} onClick={navigateItems}> 
-                Items
-              </Button>
+            <Button sx={{ color: '#fff' }} onClick={navigateHome}>
+              Home
+            </Button>
+            <Button sx={{ color: '#fff' }} onClick={navigateDiscounted}>
+              Deals
+            </Button>
+            <Button sx={{ color: '#fff' }} onClick={navigateItems}>
+              Items
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>
