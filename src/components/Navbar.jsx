@@ -77,6 +77,22 @@ export default function DrawerAppBar(props) {
     navigate('/discountedItems')
   }
 
+  const navigateLaptops = () => {
+    navigate('/laptops')
+  }
+
+const navigateSkincare = () => {
+  navigate('/skincare')
+}
+
+const navigateSmartphones = () => {
+  navigate('/smartphones')
+}
+
+const navigateFragrances = () => {
+  navigate('/fragrances')
+}
+
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
@@ -141,7 +157,7 @@ export default function DrawerAppBar(props) {
             <Button sx={{ color: '#fff' }} onClick={navigateDiscounted}>
               Deals
             </Button> 
-            <Button sx={{ color: '#fff' }} onClick={navigateItems}> item
+            <Button sx={{ color: '#fff' }} > item
             <Stack direction="row" spacing={2}>
         <div>
           <Button 
@@ -178,10 +194,10 @@ export default function DrawerAppBar(props) {
                       aria-labelledby="composition-button"
                       onKeyDown={handleListKeyDown}
                     >
-                      <MenuItem onClick={handleClose}>Laptops</MenuItem>
-                      <MenuItem onClick={handleClose}>Smart Phones</MenuItem>
-                      <MenuItem onClick={handleClose}>Skin Care</MenuItem>
-                      <MenuItem onClick={handleClose}>Fragrances</MenuItem>
+                      <MenuItem onClick={navigateLaptops}>Laptops</MenuItem>
+                      <MenuItem onClick={navigateSmartphones}>Smart Phones</MenuItem>
+                      <MenuItem onClick={navigateSkincare}>Skin Care</MenuItem>
+                      <MenuItem onClick={navigateFragrances}>Fragrances</MenuItem>
                     </MenuList>
                   </ClickAwayListener>
                 </Paper>
