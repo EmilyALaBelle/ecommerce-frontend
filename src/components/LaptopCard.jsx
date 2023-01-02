@@ -1,7 +1,7 @@
 import { Card, CardActionArea, CardContent, CardHeader, CardMedia, Typography } from "@mui/material"
 import "../assets/ProductCard.css"
 
-export default function ProductCard({ products, setProducts }) {
+export default function LaptopCard({ laptop, setLaptop }) {
   return (
 
     <>
@@ -9,20 +9,20 @@ export default function ProductCard({ products, setProducts }) {
         <Card>
           <CardActionArea>
             <CardHeader
-              title={products.title}
-              subheader={products.brand}>
+              title={laptop.title}
+              subheader={laptop.brand}>
             </CardHeader>
             <CardMedia
               className="image"
               component="img"
-              image={products.thumbnail}>
+              image={laptop.thumbnail}>
             </CardMedia>
             <CardContent>
               <Typography gutterBottom variant="h4" component="div">
-                ${products.price}
+                ${laptop.price}
               </Typography>
               <Typography varient="h6" >
-                rating: {products.rating}
+                rating: {laptop.rating}
               </Typography>
             </CardContent>
           </CardActionArea>

@@ -22,8 +22,6 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import Stack from '@mui/material/Stack';
 
-
-
 const drawerWidth = 240;
 
 export default function DrawerAppBar(props) {
