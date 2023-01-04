@@ -155,7 +155,7 @@ export default function DrawerAppBar(props) {
               <Button sx={{ color: '#fff' }} onClick={navigateDiscounted}>
                 Deals
               </Button>
-              <Button sx={{ color: '#fff' }} > item
+              <Button sx={{ color: '#fff' }} > Products
                 <Stack direction="row" spacing={2}>
                   <div>
                     <Button
@@ -166,7 +166,6 @@ export default function DrawerAppBar(props) {
                       aria-haspopup="true"
                       onClick={handleToggle}
                     >
-                      Dashboard
                     </Button>
                     <Popper
                       open={open}

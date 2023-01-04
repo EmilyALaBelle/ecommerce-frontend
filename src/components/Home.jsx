@@ -1,5 +1,9 @@
+import '../assets/Home.css'
+
 export default function Home() {
   return (
-    <h1>Home</h1>
+    <div className='HomePage'>
+    <h1 className="Home">Home</h1>
+    </div>
   )
 }
